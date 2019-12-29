@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>快商城-登录</title>
+    <link rel="stylesheet" href="http://localhost:6001/static/css/common.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/css/v-login.css">
+</head>
+<body>
+<nav id="titleBar" class="containerBody">
+    <a href="/registered">立即注册</a>
+</nav>
+<main id="login" class="containerBody">
+    <div id="loginBody">
+        <form id="loginForm" action="/" method="post">
+            <a href="/">
+                <img src="http://localhost:6001/static/image/LOGO.jpg">
+            </a>
+            <h1>账户登录</h1>
+            <input class="form-control form-control-lg" type="text" name="username" placeholder="用户名">
+            <input class="form-control form-control-lg" type="password" name="password" placeholder="密码">
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                <label class="form-check-label" for="rememberMe">记住我</label>
+            </div>
+            <input type="submit" value="提交" class="btn btn-primary btn-lg w-100">
+        </form>
+    </div>
+</main>
+
+
+<script src="http://localhost:6001/static/asset/jquery-3.4.1.min.js"></script>
+<script src="http://localhost:6001/static/asset/popper.min.js"></script>
+<script src="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<script src="http://localhost:6001/static/js/utils.js"></script>
+<script src="http://localhost:6001/static/js/api.js"></script>
+<script src="http://localhost:6001/static/js/v-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>快商城-后台管理</title>
+    <link rel="stylesheet" href="http://localhost:6001/static/css/common.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/css/v-manage.css">
+</head>
+<body>
+<nav id="titleBar" class="containerBody clear">
+    <h1 id="titleName">快商城-后台管理</h1>
+    <nav id="breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+</nav>
+<main id="manage" class="containerBody">
+    <nav id="sideBar">
+        <div class="item">
+            <div class="item-header">基本信息管理</div>
+            <div class="item-body">
+                <div fragment="#baseAttrListBody">平台属性列表</div>
+                <div fragment="#saveBaseAttrInfoBody">添加平台属性</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-header">商品信息管理</div>
+            <div class="item-body">
+                <div fragment="#spuManageBody">商品属性SPU管理</div>
+                <div fragment="#saveSpuBody">添加SPU</div>
+            </div>
+        </div>
+    </nav>
+    <main id="manageBody">
+<!--        基本属性列表-->
+        <div id="baseAttrListBody" style="display: none">
+            <div class="catalog">
+                <div class="form-group catalog-item catalog1">
+                    <label>一级分类</label>
+                    <select class="form-control" name="catalog1Id" selected-option="请选择">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog2">
+                    <label>二级分类</label>
+                    <select class="form-control" name="catalog2Id" selected-option="请选择">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog3">
+                    <label>三级分类</label>
+                    <select class="form-control" name="catalog3Id" selected-option="请选择">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+            </div>
+            <table class="table baseAttrList">
+                <thead>
+                <tr>
+                    <th scope="col">序号</th>
+                    <th scope="col">属性ID</th>
+                    <th scope="col">属性名称</th>
+                    <th scope="col">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+<!--                <tr>-->
+<!--                    <th>1</th>-->
+<!--                    <td>12</td>-->
+<!--                    <td>尺寸</td>-->
+<!--                    <td>-->
+<!--                        <button type="button" class="btn btn-primary editBaseAttrValueBtn" fragment="#editBaseAttrValueBody" base-attr-id="12" base-attr-name="尺寸">编辑平台属性值</button>-->
+<!--                        <button type="button" class="btn btn-danger removeBaseAttrBtn" base-attr-id="12">删除</button>-->
+<!--                    </td>-->
+<!--                </tr>-->
+                </tbody>
+            </table>
+        </div>
+<!--        添加平台属性-->
+        <div id="saveBaseAttrInfoBody" style="display: none">
+            <div class="catalog">
+                <div class="form-group catalog-item catalog1">
+                    <label>一级分类</label>
+                    <select class="form-control" name="catalog1Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog2">
+                    <label>二级分类</label>
+                    <select class="form-control" name="catalog2Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog3">
+                    <label>三级分类</label>
+                    <select class="form-control" name="catalog3Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>平台属性名</label>
+                <input type="text" name="attrName" class="form-control">
+            </div>
+            <button type="button" class="btn btn-primary saveBaseAttrBtn">保存</button>
+        </div>
+<!--        商品属性spu管理-->
+        <div id="spuManageBody" style="display: none">
+            <div class="catalog">
+                <div class="form-group catalog-item catalog1">
+                    <label>一级分类</label>
+                    <select class="form-control" name="catalog1Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog2">
+                    <label>二级分类</label>
+                    <select class="form-control" name="catalog2Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog3">
+                    <label>三级分类</label>
+                    <select class="form-control" name="catalog3Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+            </div>
+            <table class="table spuList">
+                <thead>
+                <tr>
+                    <th scope="col">序号</th>
+                    <th scope="col">商品ID</th>
+                    <th scope="col">商品名称</th>
+                    <th scope="col">商品描述</th>
+                    <th scope="col">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+<!--                <tr>-->
+<!--                    <th style="width: 6rem">1</th>-->
+<!--                    <td style="width: 6rem">24</td>-->
+<!--                    <td style="width: 8rem">小米6</td>-->
+<!--                    <td>小米6变焦双摄！5.15”屏幕，四曲面机身，骁龙835处理器！</td>-->
+<!--                    <td style="width: 12rem">-->
+<!--                        <button type="button" class="btn btn-primary editSkuBtn" spu-id="24" spu-name="小米6" fragment="#editSkuBody">编辑SKU</button>-->
+<!--                        <button type="button" class="btn btn-danger removeSpuBtn" spu-id="24">删除</button>-->
+<!--                    </td>-->
+<!--                </tr>-->
+                </tbody>
+            </table>
+        </div>
+<!--        添加spu-->
+        <div id="saveSpuBody" style="display: none">
+            <div class="catalog">
+                <div class="form-group catalog-item catalog1">
+                    <label>一级分类</label>
+                    <select class="form-control" name="catalog1Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog2">
+                    <label>二级分类</label>
+                    <select class="form-control" name="catalog2Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+                <div class="form-group catalog-item catalog3">
+                    <label>三级分类</label>
+                    <select class="form-control" name="catalog3Id">
+                        <option>请选择</option>
+<!--                        <option>2</option>-->
+<!--                        <option>3</option>-->
+<!--                        <option>4</option>-->
+<!--                        <option>5</option>-->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>SPU名称</label>
+                <input type="text" name="spuName" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>SPU描述</label>
+                <textarea name="description" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>图片上传</label>
+                <div class="imgCards">
+                    <div class="card addImgCard">
+                        <div class="card-img-top-box" has-image="false">
+                            <img src="https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2767533558,2260412678&fm=27&gp=0.jpg"
+                                 class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <span>点击上传</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>添加销售属性</label>
+                <table class="table spuSaleAttrList">
+                    <thead>
+                    <tr>
+                        <th colspan="4">
+                            <button type="button" class="btn btn-primary addSpuSaleAttrBtn">添加</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col" style="width: 6rem;">序号</th>
+                        <th scope="col" style="width: 8rem;" class="line-limit-length">销售属性名称</th>
+                        <th scope="col">销售属性值</th>
+                        <th scope="col" style="width: 12rem;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+<!--                    <tr>-->
+<!--                        <th>1</th>-->
+<!--                        <td>-->
+<!--                            <select class="form-control baseSaleAttrSelect" name="baseSaleAttr">-->
+<!--                                <option>请选择</option>-->
+<!--                                <option>2</option>-->
+<!--                                <option>3</option>-->
+<!--                                <option>4</option>-->
+<!--                                <option>5</option>-->
+<!--                            </select>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <input type="text" class="form-control spuSaleAttrValueInput" name="spuSaleAttrValue">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <button type="button" class="btn btn-danger removeSpuSaleAttrBtn">删除</button>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary saveSpuBtn">保存</button>
+            </div>
+        </div>
+        <!--            编辑平台属性-->
+        <div id="editBaseAttrValueBody" style="display: none;" base-attr-id="" base-attr-name="">
+            <div class="form-group form-control">
+                所属属性：<span class="baseAttrName"></span>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saveBaseAttrValueModal">添加</button>
+                <div class="modal fade" id="saveBaseAttrValueModal" tabindex="-1" role="dialog" aria-labelledby="saveBaseAttrValueModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="saveBaseAttrValueModalTitle">保存平台属性值</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>平台属性值</label>
+                                    <input type="text" name="baseAttrValueName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary saveBaseAttrValueBtn">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table baseAttrValueList">
+                <thead>
+                <tr>
+                    <th scope="col">序号</th>
+                    <th scope="col">属性值ID</th>
+                    <th scope="col">属性值名称</th>
+                    <th scope="col">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+<!--                <tr>-->
+<!--                    <th>1</th>-->
+<!--                    <td>39</td>-->
+<!--                    <td>4寸以下</td>-->
+<!--                    <td>-->
+<!--                        <button type="button" class="btn btn-danger removeBaseAttrValueBtn" base-attr-value-id="12">删除</button>-->
+<!--                    </td>-->
+<!--                </tr>-->
+                </tbody>
+            </table>
+        </div>
+<!--        编辑sku-->
+        <div id="editSkuBody" style="display: none;">
+            <div class="form-group form-control">
+                所属SPU：<span class="spuId-spuName"></span>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saveSkuModal">添加</button>
+                <div class="modal fade" id="saveSkuModal" tabindex="-1" role="dialog" aria-labelledby="saveSkuModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="saveSkuModalTitle">保存SKU</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!--        添加sku-->
+                                <div id="saveSkuBody">
+                                    <div class="form-group">
+                                        <label>SKU名称</label>
+                                        <input type="text" name="skuName" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>SKU描述</label>
+                                        <textarea name="skuDesc" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>SKU价格</label>
+                                        <input type="text" name="price" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>SKU重量</label>
+                                        <input type="text" name="weight" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>图片选择</label>
+                                        <div class="imgCards">
+<!--                                            <div class="card" image-id="">-->
+<!--                                                <div class="card-img-top-box" has-image="false">-->
+<!--                                                    <img src="https://ss0.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2767533558,2260412678&fm=27&gp=0.jpg"-->
+<!--                                                         class="card-img-top" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="card-body">-->
+<!--                                                    <input type="radio" name="skuDefaultImgId">设为默认-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>选择销售属性</label>
+                                        <div class="attr saleAttrs">
+<!--                                            <div class="form-group attr-item">-->
+<!--                                                <label>销售属性</label>-->
+<!--                                                <select class="form-control" name="saleAttr">-->
+<!--                                                    <option>请选择</option>-->
+<!--                                                    <option>2</option>-->
+<!--                                                    <option>3</option>-->
+<!--                                                    <option>4</option>-->
+<!--                                                    <option>5</option>-->
+<!--                                                </select>-->
+<!--                                            </div>-->
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>选择平台属性</label>
+                                        <div class="attr baseAttrs">
+<!--                                            <div class="form-group attr-item">-->
+<!--                                                <label>平台属性</label>-->
+<!--                                                <select class="form-control" name="baseAttr">-->
+<!--                                                    <option>请选择</option>-->
+<!--                                                    <option>2</option>-->
+<!--                                                    <option>3</option>-->
+<!--                                                    <option>4</option>-->
+<!--                                                    <option>5</option>-->
+<!--                                                </select>-->
+<!--                                            </div>-->
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary saveSkuBtn">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table skuList">
+                <thead>
+                <tr>
+                    <th scope="col">序号</th>
+                    <th scope="col">SKU-ID</th>
+                    <th scope="col">SKU名称</th>
+                    <th scope="col">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+<!--                <tr>-->
+<!--                    <th>1</th>-->
+<!--                    <td>11</td>-->
+<!--                    <td>小米6 全网通 4GB+64GB 亮黑色 移动联通电信4G手机 双卡双待</td>-->
+<!--                    <td>-->
+<!--                        <button type="button" class="btn btn-danger removeSkuBtn" sku-id="12">删除</button>-->
+<!--                    </td>-->
+<!--                </tr>-->
+                </tbody>
+            </table>
+        </div>
+    </main>
+<!--    <form id="imgUpForm" enctype="multipart/form-data" hidden>-->
+<!--        <input type="file" id="imgUp" accept="image/*">-->
+<!--    </form>-->
+</main>
+
+
+<div class="modal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tipsModalLabel">提示</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="http://localhost:6001/static/asset/jquery-3.4.1.min.js"></script>
+<script src="http://localhost:6001/static/asset/popper.min.js"></script>
+<script src="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<script src="http://localhost:6001/static/js/utils.js"></script>
+<script src="http://localhost:6001/static/js/api.js"></script>
+<script src="http://localhost:6001/static/js/v-manage.js"></script>
+</body>
+</html>

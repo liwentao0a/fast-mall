@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwt.fastmall.api.mapper.tk.PmsSkuInfoMapper">
+
+    <select id="selectGroupBy" resultType="com.lwt.fastmall.api.bean.PmsSkuInfo">
+        SELECT
+        any_value(id) id,
+        any_value(product_id) product_id,
+        any_value(price) price,
+        any_value(sku_name) sku_name,
+        any_value(sku_desc) sku_desc,
+        any_value(weight) weight,
+        any_value(tm_id) tm_id,
+        any_value(catalog3_id) catalog3_id,
+        any_value(sku_default_img) sku_default_img
+        FROM pms_sku_info GROUP BY ${fieldName}
+    </select>
+</mapper>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>快商城-商品已成功加入到购物车</title>
+    <link rel="stylesheet" href="http://localhost:6001/static/css/common.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/css/v-car-add-success.css">
+</head>
+<body>
+<nav id="titleBar" class="containerBody clear">
+    <div class="fl">
+        <a href="/"><span style="font-weight: 400;font-size: 1.75rem">快商城</span></a>
+        <a href="/cat">购物车</a>
+        <a href="/login">登录</a>
+    </div>
+    <div class="fr">
+        <form id="searchForm" class="clear" action="/search" method="post">
+            <input type="text" name="keyword" class="form-control">
+            <input type="submit" value="搜索" class="btn btn-dark">
+        </form>
+    </div>
+</nav>
+<main id="carAddSuccessContainer">
+    <div id="carAddSuccess" class="containerBody clear">
+        <div id="carAddMsgBody" class="fl">
+            <div class="carAddMsgTips" style="color: #71b247;font-size: 1.75rem;font-weight: 400;line-height: 3rem;">
+                商品已成功加入购物车！
+            </div>
+            <div class="carAddProduct clear">
+                <div class="carAddProductThumbnailBox">
+                    <img class="carAddProductThumbnail" src="https://img10.360buyimg.com/cms/s60x60_jfs/t1/67822/22/9911/141808/5d7804a3E1c1796ce/a4ff0dd48086f3e4.jpg"/>
+                </div>
+                <div class="carAddProductDesc">
+                    <h1 class="line-limit-length w-100 productName" style="font-size: 1.25rem;font-weight: 400;">
+                        Apple iPhone 11 (A2223) 64GB 黑色 移动联通电信4G手机 双卡双待</h1>
+                    <div class="carAddProductDescSaleAttrMap line-limit-length">
+                        <span>颜色：黑色</span>
+                        <span>尺码：64GB</span>
+                        <span>/ 数量：1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="carAddBtnBody" class="fr">
+            <button type="button" class="btn btn-light goItemBtn">查看商品详情</button>
+            <button type="button" class="btn btn-primary goCarBtn">去购物车结算</button>
+        </div>
+    </div>
+</main>
+<hr style="margin-top: 0;">
+<footer style="text-align: center;line-height: 3rem;">
+    &copy;2019
+</footer>
+
+
+<script src="http://localhost:6001/static/asset/jquery-3.4.1.min.js"></script>
+<script src="http://localhost:6001/static/asset/popper.min.js"></script>
+<script src="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<script src="http://localhost:6001/static/js/utils.js"></script>
+<script src="http://localhost:6001/static/js/api.js"></script>
+<script src="http://localhost:6001/static/js/v-car-add-success.js"></script>
+</body>
+</html>

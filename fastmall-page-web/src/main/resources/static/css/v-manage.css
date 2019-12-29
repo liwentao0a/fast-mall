@@ -1,0 +1,136 @@
+.containerBody{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#titleBar{
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+#titleBar>*{
+    float: left;
+    display: inline-block;
+}
+#titleBar h1{
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin: 0;
+    line-height: 3rem;
+}
+#titleBar #breadcrumb{
+    line-height: 1.5;
+}
+#titleBar #breadcrumb ol{
+    background-color: rgba(0,0,0,0);
+    margin: 0;
+}
+
+#manage{
+    position: relative;
+}
+#sideBar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+}
+#sideBar .item{
+    border: 1px solid rgba(0,0,0,.125);
+    background-color: #fff;
+    cursor: pointer;
+}
+#sideBar .item-header{
+    padding: .75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+}
+#sideBar .item-body{
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+#sideBar .item-body>div{
+    display: block;
+    padding: .75rem 1.25rem;
+}
+#sideBar .item-body>div:hover{
+    background-color: rgba(0,0,0,.03);
+}
+.sideBarItemBodyItemClick{
+    /*background-color: rgba(0,0,0,.125);*/
+    color: #007bff;
+}
+
+#manageBody{
+    margin-left: 200px;
+    padding: 0 20px;
+}
+
+.catalog{
+    margin-bottom: 1rem;
+}
+.catalog-item{
+    width: 240px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.table tbody{
+    line-height: 3rem;
+}
+
+.imgCards .card{
+    width: 140px;
+    /*height: 140px;*/
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.imgCards .card-body{
+    padding: 0;
+    font-size: 0.75rem;
+}
+.imgCards .card-img-top-box{
+    width: 138px;
+    height: 138px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    text-align:center;
+}
+.imgCards .card-img-top{
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cardSelected{
+    border: #007bff solid 1px;
+}
+
+#saveSpuBody .spuSaleAttrValueInput{
+    width: 6rem;
+}
+
+#saveSpuBody .spuSaleAttrValueInput{
+    display: inline-block;
+}
+#saveSpuBody .spuSaleAttrValueInput[readonly]{
+    cursor: pointer;
+}
+#saveSpuBody .baseSaleAttrSelect{
+    display: inline-block;
+}
+
+#saveSkuModal .attr{
+    margin-bottom: 1rem;
+}
+#saveSkuModal .attr-item{
+    width: 200px;
+    margin-right: 10px;
+    display: inline-block;
+}

@@ -1,0 +1,94 @@
+.containerBody{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#titleBar{
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+#titleBar>.fl>*{
+    padding: 0 0.5rem;
+}
+#searchForm{
+    vertical-align: middle;
+    display: inline-block;
+}
+#searchForm>*{
+    float: left;
+}
+#searchForm>input[name="keyword"]{
+    width: 300px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#searchForm>input[type="submit"]{
+    width: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+#addrBody{
+    margin-bottom: 1rem;
+    border: 1px solid #e9e9e9;
+    padding: 8px 12px;
+}
+
+
+#billProductTable .billProductThead{
+    background: #f3f3f3;
+    border: 1px solid #e9e9e9;
+    margin-bottom: 1rem;
+}
+#billProductTable .billProductTh,#billProductTable .billProductTd,#billProductTable .billProductTf{
+    float: left;
+    padding: 8px 12px;
+}
+#billProductTable .billProductTh,#billProductTable .billProductTd{
+    width: 100px;
+}
+#billProductTable .productColumn{
+    width: 694px;
+}
+#billProductTable .billProductTbody .billProductTr{
+    border: 1px solid #e9e9e9;
+}
+#billProductTable .fr{
+    float: right !important;
+}
+
+
+.billProductImageBox{
+    width: 80px;
+    height: 80px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    text-align:center;
+    position: relative;
+}
+.billProductImage{
+    max-width: 100%;
+    max-height: 100%;
+}
+.billProductDesc{
+    width: 574px;
+    margin-left: 12px;
+}
+.billProductDesc h1{
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.billProductSaleAttr{
+    color: #aaa;
+}
+.billProductTfoot {
+    border: 1px solid #e9e9e9;
+}

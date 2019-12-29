@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>快商城-后台管理登录</title>
+    <link rel="stylesheet" href="http://localhost:6001/static/css/common.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/css/v-manage-login.css">
+</head>
+<body>
+<main id="manageLogin" class="containerBody">
+    <div id="manageLoginBody">
+        <form id="manageLoginForm" action="/manageLogin" method="post">
+            <a href="/">
+                <img src="http://localhost:6001/static/image/LOGO.jpg">
+            </a>
+            <h1>后台登录</h1>
+            <input class="form-control form-control-lg" type="text" name="username" placeholder="用户名">
+            <input class="form-control form-control-lg" type="password" name="password" placeholder="密码">
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                <label class="form-check-label" for="rememberMe">记住我</label>
+            </div>
+            <input type="submit" value="提交" class="btn btn-primary btn-lg w-100">
+        </form>
+    </div>
+</main>
+
+
+<div class="modal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tipsModalLabel">提示</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://localhost:6001/static/asset/jquery-3.4.1.min.js"></script>
+<script src="http://localhost:6001/static/asset/popper.min.js"></script>
+<script src="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<script src="http://localhost:6001/static/js/utils.js"></script>
+<script src="http://localhost:6001/static/js/api.js"></script>
+<script src="http://localhost:6001/static/js/v-manage-login.js"></script>
+</body>
+</html>

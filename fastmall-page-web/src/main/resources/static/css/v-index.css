@@ -1,0 +1,152 @@
+.containerBody{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#titleBar{
+    line-height: 3rem;
+}
+#titleBar>.fl>*{
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+#searchForm{
+    vertical-align: middle;
+    display: inline-block;
+}
+#searchForm>*{
+    float: left;
+}
+#searchForm>input[name="keyword"]{
+    width: 300px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#searchForm>input[type="submit"]{
+    width: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+#catalogBarContainer{
+    line-height: 3rem;
+    background-color: #1d2124;
+}
+#catalogBar{
+    position: relative;
+}
+#catalogBar .catalog-item{
+    display: inline-block;
+    /*padding: 0 0.5rem;*/
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    float: left;
+}
+#catalogBar .catalog-item:hover,#catalogBar .catalog1:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+
+/*#catalogBar .catalog-item:hover .catalog1s{*/
+/*    display: block;*/
+/*}*/
+
+#catalogBar .catalog1s{
+    width: 200px;
+    display: none;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    z-index: 99;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #888888;
+    color: #1d2124;
+    line-height: 1.5rem;
+}
+#catalogBar .catalog1s .catalog2s{
+    line-height: 3rem;
+}
+#catalogBar .catalog1s .catalog1{
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+#catalogBar>.catalog1 .catalog2s{
+    display: none;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #888888;
+    color: #1d2124;
+}
+#catalogBar .catalog1s .catalog2s{
+    width: 800px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    /*right: 0;*/
+    z-index: 100;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #888888;
+    color: #1d2124;
+}
+#catalogBar .catalog2s ol{
+    margin: 0;
+    padding: 0 40px;
+}
+#catalogBar .catalog2s ol>*{
+    float: left;
+    margin: 0;
+}
+#catalogBar .catalog2s ol dt{
+    padding: 0 0.5rem;
+}
+#catalogBar .catalog2s ol a{
+    padding: 0 0.5rem;
+}
+#catalogBar .catalog .catalog2s{
+    left: 200px;
+}
+
+#adCarouselBanner{
+    margin-bottom: 1rem;
+}
+#adCarouselBannerBody{
+    height: 400px;
+}
+#adCarouselBannerBody .d-block{
+    height: 400px;
+}
+
+#productCards>.card{
+    width: 180px;
+    margin: 10px;
+    display: inline-block;
+    float: left;
+}
+#productCards .card-img-top-box{
+    width: 178px;
+    height: 178px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    text-align:center;
+}
+#productCards .card-img-top{
+    width: auto;
+    max-width: 178px;
+    max-height: 178px;
+}

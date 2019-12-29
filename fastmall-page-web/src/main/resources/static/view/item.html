@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>快商城-商品详情</title>
+    <link rel="stylesheet" href="http://localhost:6001/static/css/common.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:6001/static/css/v-item.css">
+</head>
+<body>
+<nav id="titleBar" class="containerBody clear">
+    <div class="fl">
+        <a href="/"><span style="font-weight: 400;font-size: 1.75rem">快商城</span></a>
+        <a href="/user/car.do">购物车</a>
+        <div id="tbLogin">
+            <a class="login" href="/login.do">登录</a>
+        </div>
+    </div>
+    <div class="fr">
+        <form id="searchForm" class="clear" action="/search" method="post">
+            <input type="text" name="keyword" class="form-control">
+            <input type="submit" value="搜索" class="btn btn-dark">
+        </form>
+    </div>
+</nav>
+<main id="productItem" class="containerBody clear">
+    <div id="productItemImageBody">
+        <div class="productItemImageBox">
+            <img class="productItemImage" src="http://img12.360buyimg.com/n1/s450x450_jfs/t1/59022/28/10293/141808/5d78088fEf6e7862d/68836f52ffaaad96.jpg"/>
+        </div>
+        <div class="productItemThumbnailList clear">
+            <div class="productItemThumbnailBox">
+                <img class="productItemThumbnail" src="http://img12.360buyimg.com/n1/s450x450_jfs/t1/59022/28/10293/141808/5d78088fEf6e7862d/68836f52ffaaad96.jpg"/>
+            </div>
+            <div class="productItemThumbnailBox">
+                <img class="productItemThumbnail" src="//img10.360buyimg.com/n1/s450x450_jfs/t1/42105/10/14563/164377/5d7804beE84334b35/ad078902888a8a75.jpg"/>
+            </div>
+        </div>
+    </div>
+    <div id="productItemDetailsBody">
+        <div class="form-group">
+            <h1 class="skuName" style="font-weight: 400;font-size: 1.75rem;">小米6 全网通 4GB+64GB 亮黑色 移动联通电信4G手机 双卡双待</h1>
+        </div>
+        <div class="form-group">
+            <span class="skuDesc">商品名称：小米 小米6商品编号：4230919商品毛重：400.00g商品产地：中国大陆系统：安卓（Android）机身厚度：薄（7mm-8.5mm）拍照特点：光学变焦，后置双摄像头电池容量：3000mAh-3999mAh机身颜色：黑色系热点：快速充电运行内存：4GB前置摄像头像素：800万-1599万游戏配置：MIMO技术后置摄像头像素：1200万-1999万机身内存：64GB屏幕配置：全高清 FHD</span>
+        </div>
+        <div class="form-group">
+            价格：<span style="color: red;">￥</span><span class="price" style="font-size: 1.5rem;color: red;">2299</span>
+        </div>
+        <div class="form-group">
+            重量：<span class="weight">0.4</span>kg
+        </div>
+        <hr style="border-top: 1px dotted #afafaf;margin-top: 0;">
+        <div class="form-group" id="chooseSaleAttrs">
+            <ol class="saleAttr clear">
+                <dt>版本</dt>
+                <dd>1.0</dd>
+                <dd>2.0</dd>
+                <dd>3.2</dd>
+            </ol>
+            <ol class="saleAttr clear">
+                <dt>颜色</dt>
+                <dd>红色</dd>
+                <dd>黑色</dd>
+                <dd>白色</dd>
+            </ol>
+        </div>
+        <hr style="border-top: 1px dotted #afafaf;margin-top: 0;">
+        <div class="form-group">
+            <div id="quantity" class="clear">
+                <input class="sub fl form-control" type="button" value="-"/>
+                <input class="text_box fl form-control" name="quantity" type="text" value="1"/>
+                <input class="add fl form-control" type="button" value="+"/>
+            </div>
+            <button type="button" class="btn btn-primary" id="addCarBtn">加入购物车</button>
+        </div>
+    </div>
+</main>
+<hr>
+<footer style="text-align: center;line-height: 3rem;">
+    &copy;2019
+</footer>
+
+
+<div class="modal fade" id="tipsModal" tabindex="-1" role="dialog" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tipsModalLabel">提示</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="http://localhost:6001/static/asset/jquery-3.4.1.min.js"></script>
+<script src="http://localhost:6001/static/asset/popper.min.js"></script>
+<script src="http://localhost:6001/static/asset/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+<script src="http://localhost:6001/static/js/utils.js"></script>
+<script src="http://localhost:6001/static/js/api.js"></script>
+<script src="http://localhost:6001/static/js/v-item.js"></script>
+</body>
+</html>

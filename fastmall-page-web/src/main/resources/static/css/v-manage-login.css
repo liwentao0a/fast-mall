@@ -1,0 +1,40 @@
+.containerBody{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#manageLogin{
+    padding-top: 80px;
+}
+#manageLoginBody{
+    width: 340px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #888888;
+}
+#manageLoginForm{
+    text-align: center;
+}
+#manageLoginForm>a>img{
+    width: 100px;
+    height: 100px;
+}
+#manageLoginForm>h1{
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+#manageLoginForm input[name="username"]{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#manageLoginForm input[name="password"]{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 1rem;
+}
+#manageLoginForm div[class="form-check"],#manageLoginForm input[type="submit"]{
+    margin-bottom: 1rem;
+}
